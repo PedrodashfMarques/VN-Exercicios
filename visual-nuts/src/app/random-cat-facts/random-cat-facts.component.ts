@@ -17,7 +17,7 @@ export class RandomCatFactsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.allSubscritions.add(this.myBreedsService.getAllFacts().subscribe(data => {
-      console.log(data["data"]);
+      // console.log(data["data"]);
 
       this.factsArray = data["data"];
       

@@ -26,7 +26,7 @@ export class BreedsListComponent implements OnInit, OnDestroy {
       // console.log(data["data"]);
       this.breedsArray = data["data"];
 
-      console.log(this.breedsArray);
+      // console.log(this.breedsArray);
     }))
   }
 
