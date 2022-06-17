@@ -1,0 +1,57 @@
+.background{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 50;
+}
+
+.alert-box{
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 25%; 
+    left: 25.5vw;
+    padding: 16px;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.26);
+    transition: width 0.1s;
+
+    .area_cat_fact{
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 10px;
+
+        p{
+            font-size: 1.1em;
+            text-align: center;
+            
+        }
+
+    }
+}
+
+
+.soAnimar{
+    animation: fadein 0.5s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

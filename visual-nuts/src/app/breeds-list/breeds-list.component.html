@@ -3,9 +3,9 @@
     <div class="breeds_list_area">
         <h1> Breeds List </h1>
 
-        <div class="list">
+        <div class="list soAnimar">
             <ul *ngFor="let eachBreed of breedsArray">
-                <li> {{eachBreed.breed}} </li>
+                <li (click)="goToBreedDetail(eachBreed.breed)"> {{eachBreed.breed}} </li>
             </ul>
         </div>
     </div>

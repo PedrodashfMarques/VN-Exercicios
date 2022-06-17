@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { RandomCatFactsComponent } from './random-cat-facts/random-cat-facts.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { CatFactModalComponent } from './cat-fact-modal/cat-fact-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
     BreedsListComponent,
     BreedDetailComponent,
     HeaderComponent,
-    RandomCatFactsComponent
+    RandomCatFactsComponent,
+    CatFactModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

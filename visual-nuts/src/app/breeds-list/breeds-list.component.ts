@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { BreedsService } from '../breeds.service';
 import { Breed } from '../shared/breed-model';
@@ -14,7 +15,10 @@ export class BreedsListComponent implements OnInit, OnDestroy {
 
   private allSubscritions: Subscription = new Subscription();
 
-  constructor(private myBreedsService: BreedsService) { }
+  constructor(
+    private myBreedsService: BreedsService,
+    private myRouter: Router
+    ) { }
 
 
   ngOnInit(): void {
@@ -24,6 +28,10 @@ export class BreedsListComponent implements OnInit, OnDestroy {
 
       console.log(this.breedsArray);
     }))
+  }
+
+  goToBreedDetail(breed: string){
+    this.myRouter.navigate([`/breed-detail/${breed}`])
   }
 
   ngOnDestroy(): void {

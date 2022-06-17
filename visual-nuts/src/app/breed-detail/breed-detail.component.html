@@ -1,1 +1,33 @@
-<p>breed-detail works!</p>
+<main class="container">
+
+    <app-cat-fact-modal
+    *ngIf="modalAbertoFrom"
+    (closeModal)="fecharModal()"
+    [factReceived]="randomFact"
+    >
+
+    </app-cat-fact-modal>
+
+    <div *ngIf="isLoading" class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div *ngIf="!isLoading" class="area_detail soAnimar">
+        <h1> {{breedSearchedURL}} </h1>
+        <ul>
+            <li> Coat: {{breedDetails.coat}} </li>
+            <li> Country: {{breedDetails.country}} </li>
+            <li> Origin: {{breedDetails.origin}} </li>
+            <li> Pattern: {{breedDetails.pattern}} </li>
+        </ul>
+    </div>
+
+    <div *ngIf="!isLoading" class="button_area">
+        <button (click)="generateFact()" mat-raised-button> Generate Random Fact </button>
+        
+    </div>
+
+</main>
