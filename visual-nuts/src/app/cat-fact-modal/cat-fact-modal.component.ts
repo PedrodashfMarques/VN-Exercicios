@@ -18,7 +18,6 @@ export class CatFactModalComponent implements OnInit {
 
   fecharModal(){
     this.closeModal.emit();
-
   }
 
 }

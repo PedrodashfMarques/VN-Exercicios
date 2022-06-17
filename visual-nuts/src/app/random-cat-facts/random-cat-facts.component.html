@@ -1,6 +1,13 @@
 <main class="container">
     <div class="random-cats-area">
         <h1> Random Cats Fact </h1>
+
+        <div class="list soAnimar">
+            <ul *ngFor="let eachFact of factsArray">
+                <li> {{eachFact.fact}} </li>
+            </ul>
+        </div>
     </div>
 
 </main>
+

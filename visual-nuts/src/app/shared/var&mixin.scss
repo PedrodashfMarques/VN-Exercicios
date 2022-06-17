@@ -1,0 +1,62 @@
+@mixin main-area{
+    max-width: 1400px;
+    height: 800px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+@mixin list-area{
+    width: 100%;
+    height: auto;
+
+    h1{
+        text-align: center;
+        margin: 15px auto;
+        font-size: 2.2em;
+        padding: 10px 0px;
+    }
+
+    div.list{
+        width: 50%;
+        height: 700px;
+        // background-color: orange;
+        margin: 0 auto;
+        text-align: center;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            display: none;  /* Remove scrollbar space */
+        }
+
+        li{
+            width: 100%;
+            background-color: rgb(44, 44, 44);
+            margin: 25px auto;
+            line-height: 40px;
+            border-radius: 3px;
+            color: white;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+
+    }
+}
+
+
+@mixin animateFade{
+    animation: fadein 1.6s;
+
+}
+
+
+// Animations
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+// Animations

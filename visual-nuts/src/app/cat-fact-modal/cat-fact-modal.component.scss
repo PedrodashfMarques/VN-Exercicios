@@ -1,3 +1,5 @@
+@import '../shared/var&mixin.scss';
+
 .background{
     width: 100%;
     height: 100vh;
@@ -18,7 +20,7 @@
     padding: 16px;
     z-index: 100;
     border-radius: 5px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.26);
+    // box-shadow: 0 5px 5px rgba(0,0,0,0.26);
     transition: width 0.1s;
 
     .area_cat_fact{
@@ -42,16 +44,5 @@
 
 
 .soAnimar{
-    animation: fadein 0.5s;
-}
-
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+    @include animateFade; 
 }

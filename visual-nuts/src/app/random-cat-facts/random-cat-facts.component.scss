@@ -1,0 +1,13 @@
+@import '../shared/var&mixin.scss';
+
+main{
+    @include main-area;
+
+    .random-cats-area{
+        @include list-area;
+    }
+}
+
+.soAnimar{
+    @include animateFade;
+}

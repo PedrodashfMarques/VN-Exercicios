@@ -50,7 +50,7 @@ export class BreedDetailComponent implements OnInit, OnDestroy {
     this.randomFact = "";
     this.modalAbertoFrom = !this.modalAbertoFrom;
 
-    this.allSubscritions.add(this.myBreedsService.getRandomFacts().subscribe(data => {
+    this.allSubscritions.add(this.myBreedsService.getRandomFact().subscribe(data => {
       this.randomFact = data["fact"];
       // this.myBreedsService.randomCatFact.next(data["fact"]);
     }))

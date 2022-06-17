@@ -17,9 +17,17 @@ export class BreedsService {
     return this.myHttp.get(url);
   }
 
-  getRandomFacts(): Observable<Object>{
+  getAllFacts(){
+    let url = this.api + "facts";
+    return this.myHttp.get(url);
+  }
+
+
+  getRandomFact(): Observable<Object>{
     let url = this.api + "fact";
     
     return this.myHttp.get(url);
   }
+
+
 }
